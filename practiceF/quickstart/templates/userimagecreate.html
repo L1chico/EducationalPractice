@@ -15,7 +15,7 @@
     {% for b in all_user_image %}
     <p>{{ b.title }}</p>
     <img src="{{ b.image_downloaded.url }}" width="100px">
-    <p>Оригинальный размер картинки  {{ b.image_downloaded.width }}x{{ b.image_downloaded.height }}</p>
+    <!-- <p>Оригинальный размер картинки  {{ b.image_downloaded.width }}x{{ b.image_downloaded.height }}</p> -->
     <br/>
     {% endfor %}
 </body>
