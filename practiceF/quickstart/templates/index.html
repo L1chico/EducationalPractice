@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    asdasdasd
-    {% for i in data %}
+    
+    {% for i in data.all_user_image %}
     <span>{{ i.title }}</span>
-    <img src="{{ i.image_downloaded.url }}">
+    <img class="image" src="{{ i.image_downloaded.url }}">
     {% endfor %}
+    <span>{{ predictedLabelresult }}</span>
     <a href='user_image/'><button>Загрузить фото</button></a>
 </body>
 </html>
